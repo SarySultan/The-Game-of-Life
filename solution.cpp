@@ -57,19 +57,28 @@ int main() {
 
             if (matrix[i][j] == 1) {
                 if (sum < 2 || sum > 3) {
-                    newMatrix[i][j] = 0; 
+                    newMatrix[i][j] = 0;
                 } else {
                     newMatrix[i][j] = 1;
                 }
             } else {
                 if (sum == 3) {
-                    newMatrix[i][j] = 1; 
+                    newMatrix[i][j] = 1;
                 } else {
-                    newMatrix[i][j] = 0; 
+                    newMatrix[i][j] = 0;
                 }
             }
         }
     }
+
+    cout << "The matrix before editing:" << endl;
+    for (int i = 0; i < rows; ++i) {
+        for (int j = 0; j < cols; ++j) {
+            cout << matrix[i][j] << " ";
+        }
+        cout << endl;
+    }
+    cout << endl;
 
     cout << "The resulting matrix is:" << endl;
     for (int i = 0; i < rows; ++i) {
